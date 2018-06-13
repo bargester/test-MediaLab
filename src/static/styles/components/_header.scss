@@ -8,6 +8,7 @@
     @include flex(row, space-between, center, nowrap)
   }
   &__side{
+    margin-right: 195px;
     width: 360px;
     height: 100%;
   }
