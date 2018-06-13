@@ -1,7 +1,8 @@
-//@font-face {
-//  font-family: '';
-//  src: url("") format('eot');
-//  src: url("") format('svg');
-//  src: url("") format('ttf');
-//  src: url("") format('woff');
-//}
+@font-face {
+  font-family: 'PT-Sans';
+  src: url("static/fonts/PT-Sans/PT_Sans-Web-Regular.ttf") format('ttf');
+}
+@font-face {
+  font-family: 'PT-Sans Bold';
+  src: url("static/fonts/PT-Sans/PT_Sans-Web-Bold.ttf") format('ttf');
+}

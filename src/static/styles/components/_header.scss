@@ -1,0 +1,77 @@
+.header-s{
+  background-color: rgba(#000, 0.7);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  &__wrap{
+    height: 100%;
+    @include flex(row, space-between, center, nowrap)
+  }
+  &__side{
+    width: 360px;
+    height: 100%;
+  }
+}
+
+
+.menu{
+  width: 100%;
+  height: 100%;
+  @include flex(row, space-between, center, nowrap);
+  font-family: PT-Sans, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  z-index: 1;
+  a:hover{
+    color: $hover-color;
+  }
+  &__list{
+    position: relative;
+  }
+  &__drop-wrap{
+    padding-top: 30px;
+    opacity: 0;
+    top: 9999em;
+    position: absolute;
+    left: -100px;
+  }
+  &__drop{
+    border-radius: 5px;
+    @include flex(row, flex-start, flex-start, nowrap);
+    background-color: rgba(#000, 0.7);
+    ul {
+      width: 125px;
+      li {
+        width: 100%;
+        padding-left: 30px;
+        font-size: 14px;
+        margin-top: 5px;
+        a:hover{
+          text-decoration: underline;
+        }
+        &:first-child {
+          font-size: 16px;
+          margin: 0;
+          padding: 0;
+          height: 40px;
+          color: #000;
+          line-height: 40px;
+          text-align: center;
+          text-transform: uppercase;
+          background-color: #ecbc24;
+        }
+      }
+      &:first-child li:first-child {
+        border-top-left-radius: 5px;
+      }
+      &:last-child li:first-child {
+        border-top-right-radius: 5px;
+      }
+    }
+  }
+}
+
+.menu__list:hover .menu__drop-wrap {
+    opacity: 1;
+    top: 19px;
+}
